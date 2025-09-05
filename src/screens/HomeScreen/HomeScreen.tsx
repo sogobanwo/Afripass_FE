@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Send, Users, Award, Search, TrendingUp, Heart } from 'lucide-react';
+import { Users, Plus, CheckSquare, Award, TrendingUp, Heart, Coins } from 'lucide-react';
 import { useWallet } from '../../contexts/WalletContext';
 import Card from '../../components/UI/Card';
 import Button from '../../components/UI/Button';
@@ -12,39 +12,39 @@ const HomeScreen: React.FC = () => {
 
   const quickActions = [
     {
-      title: 'Send Tips',
-      description: 'Support creators with micro-payments',
-      icon: Heart,
-      link: '/pay',
+      title: 'Join Communities',
+      description: 'Discover and join creator communities',
+      icon: Users,
+      link: '/communities',
       color: 'from-pink-400 to-orange-400',
     },
     {
-      title: 'Find Creators',
-      description: 'Discover amazing African talent',
-      icon: Search,
-      link: '/search',
+      title: 'Create Community',
+      description: 'Start your own creator community',
+      icon: Plus,
+      link: '/create-community',
       color: 'from-teal-400 to-blue-400',
     },
     {
-      title: 'Family Fund',
-      description: 'Manage shared family finances',
-      icon: Users,
-      link: '/family',
+      title: 'Complete Tasks',
+      description: 'Submit work and earn rewards',
+      icon: CheckSquare,
+      link: '/tasks',
       color: 'from-green-400 to-teal-400',
     },
     {
       title: 'AfriPass NFT',
-      description: 'Earn your creator community pass',
+      description: 'View your community passes',
       icon: Award,
-      link: '/pass',
+      link: '/dashboard',
       color: 'from-yellow-400 to-orange-400',
     },
   ];
 
   const recentActivity = [
-    { type: 'tip', amount: '$2.50', recipient: 'amafarmer.eth', time: '2 hours ago' },
-    { type: 'received', amount: '$5.00', sender: 'supporter.eth', time: '1 day ago' },
-    { type: 'family', amount: '$25.00', action: 'approved', time: '2 days ago' },
+    { type: 'task_completed', amount: '$12.50', community: 'accracreators.eth', time: '2 hours ago' },
+    { type: 'nft_minted', community: 'lagosartists.eth', action: 'joined', time: '1 day ago' },
+    { type: 'reward_earned', amount: '$25.00', task: 'Cocoa delivery proof', time: '2 days ago' },
   ];
 
   return (
@@ -97,27 +97,27 @@ const HomeScreen: React.FC = () => {
             <div key={index} className="flex items-center justify-between py-2">
               <div className="flex items-center space-x-3">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                  activity.type === 'tip' ? 'bg-pink-100 text-pink-600' :
-                  activity.type === 'received' ? 'bg-green-100 text-green-600' :
+                  activity.type === 'task_completed' ? 'bg-green-100 text-green-600' :
+                  activity.type === 'nft_minted' ? 'bg-purple-100 text-purple-600' :
                   'bg-teal-100 text-teal-600'
                 }`}>
-                  {activity.type === 'tip' ? <Heart size={16} /> :
-                   activity.type === 'received' ? <TrendingUp size={16} /> :
-                   <Users size={16} />}
+                  {activity.type === 'task_completed' ? <CheckSquare size={16} /> :
+                   activity.type === 'nft_minted' ? <Award size={16} /> :
+                   <Coins size={16} />}
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-800">
-                    {activity.type === 'tip' ? `Sent to ${activity.recipient}` :
-                     activity.type === 'received' ? `Received from ${activity.sender}` :
-                     `Family fund ${activity.action}`}
+                    {activity.type === 'task_completed' ? `Task completed in ${activity.community}` :
+                     activity.type === 'nft_minted' ? `Joined ${activity.community}` :
+                     `Reward from ${activity.task}`}
                   </p>
                   <p className="text-xs text-gray-500">{activity.time}</p>
                 </div>
               </div>
               <span className={`font-semibold ${
-                activity.type === 'received' ? 'text-green-600' : 'text-gray-800'
+                activity.type === 'task_completed' || activity.type === 'reward_earned' ? 'text-green-600' : 'text-gray-800'
               }`}>
-                {activity.amount}
+                {activity.amount || 'NFT'}
               </span>
             </div>
           ))}
