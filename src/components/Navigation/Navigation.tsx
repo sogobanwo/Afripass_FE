@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Users, Plus, CheckSquare, Award, BarChart3 } from 'lucide-react';
+import { Home, Users, Plus, CheckSquare, Award, User } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const location = useLocation();
@@ -10,8 +10,8 @@ const Navigation: React.FC = () => {
     { path: '/communities', icon: Users, label: 'Communities' },
     { path: '/create-community', icon: Plus, label: 'Create' },
     { path: '/tasks', icon: CheckSquare, label: 'Tasks' },
-    { path: '/dashboard', icon: Award, label: 'Pass' },
-    { path: '/dashboard', icon: BarChart3, label: 'Stats' },
+    { path: '/nft-pass', icon: Award, label: 'Pass' },
+    { path: '/profile', icon: User, label: 'Profile' },
   ];
 
   return (

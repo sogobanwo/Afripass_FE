@@ -12,39 +12,39 @@ const HomeScreen: React.FC = () => {
 
   const quickActions = [
     {
-      title: 'Join Communities',
-      description: 'Discover and join creator communities',
+      title: 'Discover Communities',
+      description: 'Find and join ENS-named creator communities',
       icon: Users,
       link: '/communities',
       color: 'from-pink-400 to-orange-400',
     },
     {
       title: 'Create Community',
-      description: 'Start your own creator community',
+      description: 'Launch your ENS community with shared purse',
       icon: Plus,
       link: '/create-community',
       color: 'from-teal-400 to-blue-400',
     },
     {
       title: 'Complete Tasks',
-      description: 'Submit work and earn rewards',
+      description: 'Submit work and earn from community purses',
       icon: CheckSquare,
       link: '/tasks',
       color: 'from-green-400 to-teal-400',
     },
     {
       title: 'AfriPass NFT',
-      description: 'View your community passes',
+      description: 'Manage your community membership passes',
       icon: Award,
-      link: '/dashboard',
+      link: '/nft-pass',
       color: 'from-yellow-400 to-orange-400',
     },
   ];
 
   const recentActivity = [
-    { type: 'task_completed', amount: '$12.50', community: 'accracreators.eth', time: '2 hours ago' },
-    { type: 'nft_minted', community: 'lagosartists.eth', action: 'joined', time: '1 day ago' },
-    { type: 'reward_earned', amount: '$25.00', task: 'Cocoa delivery proof', time: '2 days ago' },
+    { type: 'task_completed', amount: '$25.00', community: 'accracreators.eth', time: '2 hours ago' },
+    { type: 'nft_minted', community: 'lagosartists.eth', action: 'AfriPass minted', time: '1 day ago' },
+    { type: 'reward_earned', amount: '$30.00', task: 'Sustainable farming documentation', time: '2 days ago' },
   ];
 
   return (

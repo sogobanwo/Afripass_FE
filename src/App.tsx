@@ -10,6 +10,8 @@ import CreateCommunityScreen from './screens/CreateCommunityScreen/CreateCommuni
 import TaskManagementScreen from './screens/TaskManagementScreen/TaskManagementScreen';
 import DashboardScreen from './screens/DashboardScreen/DashboardScreen';
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen';
+import PaymentScreen from './screens/PaymentScreen/PaymentScreen';
+import NFTPassScreen from './screens/NFTPassScreen/NFTPassScreen';
 
 function App() {
   const [isWalletConnected, setIsWalletConnected] = useState(false);
@@ -53,6 +55,8 @@ function App() {
                   <Route path="/community/:ensName" element={<CommunityHubScreen />} />
                   <Route path="/create-community" element={<CreateCommunityScreen />} />
                   <Route path="/tasks" element={<TaskManagementScreen />} />
+                  <Route path="/pay" element={<PaymentScreen />} />
+                  <Route path="/nft-pass" element={<NFTPassScreen />} />
                   <Route path="/dashboard" element={<DashboardScreen />} />
                   <Route path="/profile" element={<ProfileScreen />} />
                   <Route path="*" element={<Navigate to="/" replace />} />

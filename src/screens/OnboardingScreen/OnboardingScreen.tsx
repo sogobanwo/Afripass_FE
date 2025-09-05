@@ -13,30 +13,30 @@ const OnboardingScreen: React.FC<OnboardingScreenProps> = ({ onComplete, onWalle
 
   const steps = [
     {
-      title: 'Welcome to AfriPass',
+      title: 'Ayekoo! Welcome to AfriPass',
       subtitle: 'Build communities, earn rewards, empower creators',
-      description: 'Join African creator communities, complete tasks for rewards, and showcase your talents with ENS-powered profiles.',
+      description: 'Create or join African creator communities with shared ENS names, mint AfriPass NFTs for membership, and complete tasks for rewards from community purses.',
       icon: Heart,
       action: 'Get Started',
     },
     {
       title: 'Connect Your Wallet',
       subtitle: 'Secure and simple with Base Account',
-      description: 'No seed phrases needed. Get started with one click using Base Account for the smoothest Web3 experience.',
+      description: 'No seed phrases needed. Connect with Base Account for seamless Web3 experience on Base L2 Ethereum.',
       icon: Wallet,
       action: 'Connect Wallet',
     },
     {
-      title: 'Create Your Identity',
+      title: 'Join Your Community',
       subtitle: 'Find your creative tribe',
-      description: 'Discover communities like accracreators.eth or lagosartists.eth, mint your AfriPass NFT, and start earning rewards.',
+      description: 'Discover communities like accracreators.eth or lagosartists.eth. Mint your AfriPass NFT to unlock membership and start earning from community purses.',
       icon: Globe,
-      action: 'Claim ENS Name',
+      action: 'Explore Communities',
     },
     {
       title: 'Earn Your AfriPass',
       subtitle: 'Showcase your work',
-      description: 'Submit proof of your creative work, farming activities, or community contributions to earn rewards from community purses.',
+      description: 'Complete tasks like documenting harvests, creating art, or attending workshops. Get verified by community admins and earn rewards directly to your wallet.',
       icon: Award,
       action: 'Start Earning',
     },
