@@ -14,8 +14,8 @@ const OnboardingScreen: React.FC<OnboardingScreenProps> = ({ onComplete, onWalle
   const steps = [
     {
       title: 'Welcome to AfriPass',
-      subtitle: 'Your gateway to the decentralized future',
-      description: 'Join thousands of African creators, families, and supporters building wealth and community together.',
+      subtitle: 'Build communities, earn rewards, empower creators',
+      description: 'Join African creator communities, complete tasks for rewards, and showcase your talents with ENS-powered profiles.',
       icon: Heart,
       action: 'Get Started',
     },
@@ -28,17 +28,17 @@ const OnboardingScreen: React.FC<OnboardingScreenProps> = ({ onComplete, onWalle
     },
     {
       title: 'Create Your Identity',
-      subtitle: 'Claim your .eth name',
-      description: 'Get your unique ENS name like kofi.eth to receive tips, manage family funds, and showcase your AfriPass.',
+      subtitle: 'Find your creative tribe',
+      description: 'Discover communities like accracreators.eth or lagosartists.eth, mint your AfriPass NFT, and start earning rewards.',
       icon: Globe,
       action: 'Claim ENS Name',
     },
     {
       title: 'Earn Your AfriPass',
-      subtitle: 'Join the creator community',
-      description: 'Complete verification tasks to earn your AfriPass NFT and unlock exclusive benefits and community features.',
+      subtitle: 'Showcase your work',
+      description: 'Submit proof of your creative work, farming activities, or community contributions to earn rewards from community purses.',
       icon: Award,
-      action: 'Learn More',
+      action: 'Start Earning',
     },
   ];
 

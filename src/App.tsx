@@ -4,10 +4,10 @@ import { WalletProvider } from './contexts/WalletContext';
 import Navigation from './components/Navigation/Navigation';
 import OnboardingScreen from './screens/OnboardingScreen/OnboardingScreen';
 import HomeScreen from './screens/HomeScreen/HomeScreen';
-import ENSSearchScreen from './screens/ENSSearchScreen/ENSSearchScreen';
-import PaymentScreen from './screens/PaymentScreen/PaymentScreen';
-import MultiSigScreen from './screens/MultiSigScreen/MultiSigScreen';
-import NFTPassScreen from './screens/NFTPassScreen/NFTPassScreen';
+import CommunityDiscoveryScreen from './screens/CommunityDiscoveryScreen/CommunityDiscoveryScreen';
+import CommunityHubScreen from './screens/CommunityHubScreen/CommunityHubScreen';
+import CreateCommunityScreen from './screens/CreateCommunityScreen/CreateCommunityScreen';
+import TaskManagementScreen from './screens/TaskManagementScreen/TaskManagementScreen';
 import DashboardScreen from './screens/DashboardScreen/DashboardScreen';
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen';
 
@@ -49,10 +49,10 @@ function App() {
               <main className="pb-20 pt-4">
                 <Routes>
                   <Route path="/" element={<HomeScreen />} />
-                  <Route path="/search" element={<ENSSearchScreen />} />
-                  <Route path="/pay" element={<PaymentScreen />} />
-                  <Route path="/family" element={<MultiSigScreen />} />
-                  <Route path="/pass" element={<NFTPassScreen />} />
+                  <Route path="/communities" element={<CommunityDiscoveryScreen />} />
+                  <Route path="/community/:ensName" element={<CommunityHubScreen />} />
+                  <Route path="/create-community" element={<CreateCommunityScreen />} />
+                  <Route path="/tasks" element={<TaskManagementScreen />} />
                   <Route path="/dashboard" element={<DashboardScreen />} />
                   <Route path="/profile" element={<ProfileScreen />} />
                   <Route path="*" element={<Navigate to="/" replace />} />

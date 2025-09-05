@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Search, Send, Users, Award, BarChart3 } from 'lucide-react';
+import { Home, Users, Plus, CheckSquare, Award, BarChart3 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const location = useLocation();
 
   const navItems = [
     { path: '/', icon: Home, label: 'Home' },
-    { path: '/search', icon: Search, label: 'Search' },
-    { path: '/pay', icon: Send, label: 'Pay' },
-    { path: '/family', icon: Users, label: 'Family' },
-    { path: '/pass', icon: Award, label: 'Pass' },
+    { path: '/communities', icon: Users, label: 'Communities' },
+    { path: '/create-community', icon: Plus, label: 'Create' },
+    { path: '/tasks', icon: CheckSquare, label: 'Tasks' },
+    { path: '/dashboard', icon: Award, label: 'Pass' },
     { path: '/dashboard', icon: BarChart3, label: 'Stats' },
   ];
 
